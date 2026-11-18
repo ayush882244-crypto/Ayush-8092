@@ -1,15 +1,15 @@
+from pathlib import Path
 from PIL import Image, ImageDraw
 
-# create a white image
-image = Image.new("RGB", (500, 250), "white")
 
-# prepare to draw on the image
-draw = ImageDraw.Draw(image)
+def main():
+    output_path = Path(__file__).resolve().parent / "pillow_output.png"
+    image = Image.new("RGB", (600, 300), "white")
+    draw = ImageDraw.Draw(image)
+    draw.text((40, 120), "hello ayush", fill="black")
+    image.save(output_path)
+    print(f"success: image saved to {output_path}")
 
-# write a short message
-draw.text((30, 100), "hello ayush", fill="black")
 
-# save the image
-image.save("pillow_output.png")
-
-print("saved pillow_output.png")
+if __name__ == "__main__":
+    main()
