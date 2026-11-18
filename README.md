@@ -2,6 +2,17 @@
 
 beginner python examples for worksheet 13b
 
+## run automatically on github
+
+github actions runs the three image programs automatically whenever code is pushed to the main branch or a pull request is opened. you can also start a run manually
+
+1. open the repository on github
+2. select the actions tab
+3. choose run python examples
+4. select run workflow
+
+when the run finishes, open the run and download the generated images from the artifacts section
+
 ## what it does
 
 this project creates an image with pillow, creates a qr code with qrcode, combines the qr code with a caption, and draws a square with turtle
@@ -15,43 +26,27 @@ the qr code contains the link to this github repository
 - qrcode with pillow support
 - turtle is included with the standard python installation
 
-## setup on mac
-
-open terminal and move into the folder where you downloaded this repository
+## run locally on mac
 
 ```bash
+git clone https://github.com/ayush882244-crypto/Ayush-8092.git
 cd Ayush-8092
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-```
-
-## run the image examples
-
-run all three image programs with one command
-
-```bash
 python run_all.py
 ```
 
-you can also run each version separately
+the programs save `pillow_output.png`, `qrcode_output.png`, and `combined_output.png` in the project folder
 
-```bash
-python v0_1_pillow.py
-python v0_2_qrcode.py
-python v0_3_combined.py
-```
-
-the programs save `pillow_output.png`, `qrcode_output.png`, and `combined_output.png` in the project folder even when you start them from another directory
-
-## run the turtle homework
+## run turtle locally
 
 ```bash
 python homework_turtle.py
 ```
 
-this opens a drawing window, draws a square, and writes the project name below it. turtle needs a desktop display, so it may not work in a headless terminal or remote server
+this opens a drawing window, draws a square, and writes the project name below it. turtle needs a desktop display, so it is not run by the github actions workflow because github's runner has no graphical desktop
 
 ## output files
 
@@ -62,10 +57,4 @@ this opens a drawing window, draws a square, and writes the project name below i
 
 ## limitations
 
-the examples are intentionally small and do not have a graphical menu or advanced error handling. the turtle drawing is interactive only through its window
-
-## deactivate the virtual environment
-
-```bash
-deactivate
-```
+the examples are intentionally small and do not have a graphical menu or advanced error handling
