@@ -1,2 +1,2 @@
-Pillow
-qrcode[pil]
+Pillow>=10.0
+qrcode[pil]>=7.4
