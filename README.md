@@ -1,41 +1,71 @@
 # ayush 8092
 
-a beginner python project for worksheet 13b
+beginner python examples for worksheet 13b
 
 ## what it does
 
-this project creates a simple image with pillow, makes a qr code with qrcode, and combines both into one image
+this project creates an image with pillow, creates a qr code with qrcode, combines the qr code with a caption, and draws a square with turtle
 
-## libraries
-
-- pillow creates and edits images
-- qrcode creates qr code images and uses pillow to save them
+the qr code contains the link to this github repository
 
 ## requirements
 
-- python 3
+- python 3.9 or newer
 - pillow
-- qrcode
+- qrcode with pillow support
+- turtle is included with the standard python installation
 
-install the libraries with
+## setup on mac
 
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-## run the programs
+open terminal and move into the folder where you downloaded this repository
 
 ```bash
-python3 v0_1_pillow.py
-python3 v0_2_qrcode.py
-python3 v0_3_combined.py
-python3 homework_turtle.py
+cd Ayush-8092
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-the first three programs save pillow_output.png, qrcode_output.png, and combined_output.png in the current folder
+## run the image examples
 
-the turtle homework opens a window and draws a square with the project name
+run all three image programs with one command
+
+```bash
+python run_all.py
+```
+
+you can also run each version separately
+
+```bash
+python v0_1_pillow.py
+python v0_2_qrcode.py
+python v0_3_combined.py
+```
+
+the programs save `pillow_output.png`, `qrcode_output.png`, and `combined_output.png` in the project folder even when you start them from another directory
+
+## run the turtle homework
+
+```bash
+python homework_turtle.py
+```
+
+this opens a drawing window, draws a square, and writes the project name below it. turtle needs a desktop display, so it may not work in a headless terminal or remote server
+
+## output files
+
+- `pillow_output.png` a white image with hello ayush
+- `qrcode_output.png` a qr code linking to this repository
+- `combined_output.png` the qr code with a caption underneath
+- turtle draws directly in its own window
 
 ## limitations
 
-the programs are small examples and do not have a graphical menu or advanced error handling
+the examples are intentionally small and do not have a graphical menu or advanced error handling. the turtle drawing is interactive only through its window
+
+## deactivate the virtual environment
+
+```bash
+deactivate
+```
