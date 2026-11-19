@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: run image examples
+      - name: run image and text examples
         run: python run_all.py
 
       - name: save generated images
@@ -35,4 +35,5 @@ jobs:
             pillow_output.png
             qrcode_output.png
             combined_output.png
+            first_image.png
           if-no-files-found: error
