@@ -1,60 +1,38 @@
-# ayush 8092
+# ayush raj — worksheet 13b
 
-beginner python examples for worksheet 13b
+this repository contains my beginner python library experiments
 
-## run automatically on github
+## project releases
 
-github actions runs the three image programs automatically whenever code is pushed to the main branch or a pull request is opened. you can also start a run manually
+- v0.1 turtle — simple turtle drawing and colourful geometric shapes
+- v0.2 pillow — creating and saving images
+- v0.3 creative turtle — combining pillow and turtle to draw a sea turtle
+- v0.4 pyfiglet — printing my name as ascii art
 
-1. open the repository on github
-2. select the actions tab
-3. choose run python examples
-4. select run workflow
+## run the examples
 
-when the run finishes, open the run and download the generated images from the artifacts section
-
-## what it does
-
-this project creates an image with pillow, creates a qr code with qrcode, combines the qr code with a caption, and draws a square with turtle
-
-the qr code contains the link to this github repository
-
-## requirements
-
-- python 3.9 or newer
-- pillow
-- qrcode with pillow support
-- turtle is included with the standard python installation
-
-## run locally on mac
+install the required libraries
 
 ```bash
-git clone https://github.com/ayush882244-crypto/Ayush-8092.git
-cd Ayush-8092
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python run_all.py
 ```
 
-the programs save `pillow_output.png`, `qrcode_output.png`, and `combined_output.png` in the project folder
-
-## run turtle locally
+run the image and text examples
 
 ```bash
-python homework_turtle.py
+python run_all.py
+python v0.4-pyfiglet/first_banner.py
 ```
 
-this opens a drawing window, draws a square, and writes the project name below it. turtle needs a desktop display, so it is not run by the github actions workflow because github's runner has no graphical desktop
+run turtle examples on a computer with a graphical desktop
 
-## output files
+```bash
+python v0.1-turtle/my_drawing.py
+python v0.3-creative-turtle/draw_turtle.py
+```
 
-- `pillow_output.png` a white image with hello ayush
-- `qrcode_output.png` a qr code linking to this repository
-- `combined_output.png` the qr code with a caption underneath
-- turtle draws directly in its own window
+## author
 
-## limitations
+ayush raj
 
-the examples are intentionally small and do not have a graphical menu or advanced error handling
+github: https://github.com/ayush882244-crypto/Ayush-8092
